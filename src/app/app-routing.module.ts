@@ -4,8 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'in',
-    loadChildren: () =>
-      import('./features/main/main.module').then((m) => m.MainModule),
+    loadChildren: () => import('./out/out.module').then((m) => m.MainModule),
   },
   { path: '**', redirectTo: 'in/invitedDashboard' },
 ];

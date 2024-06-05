@@ -1,0 +1,57 @@
+//Primary color
+$primary-background: #e6ecf4;
+$primary-default: #022b53;
+$primary-hover: #02274b;
+$primary-active: #022242;
+
+//Secondary color
+$secondary-background: #e6f8fc;
+$secondary-default: #00b8de;
+$secondary-hover: #00a6c8;
+$secondary-active: #0093b2;
+
+//Success color
+$sucess-background: #d4edda;
+$sucess-default: #98d9a7;
+$sucess-hover: #3d8b4f;
+$sucess-active: #155724;
+
+//Warning color
+$warning-background: #fff3cd;
+$warning-default: #f0d88f;
+$warning-hover: #e2a242;
+$warning-active: #856404;
+
+//Danger color
+$danger-background: #f5c6cb;
+$danger-default: #e48484;
+$danger-hover: #bf3333;
+$danger-active: #721c24;
+
+//Background color
+$background-base: #f5f5f5;
+$background-secondary: #ececec;
+
+//Text color
+$text-primary: #000000;
+$text-secondary: #9e9e9ecc;
+$text-disable: #949494;
+
+//Title color
+$title-primary: #3b3f5c;
+
+//Title styles
+.title {
+  color: $title-primary;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 38.03px;
+}
+
+//Subtitle styles
+.subtitle {
+  color: $title-primary;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25.86px;
+}
