@@ -1,6 +1,24 @@
-<div id="loader">
-  <app-spinner *ngIf="miraalud"></app-spinner>
-</div>
-<header>
-  <h1>Header</h1>
+<header class="grid w-auto h-8rem header-container align-items-center align-content-center">
+  <div class="col-9" >
+    <div class="flex gap-4 justify-content-start align-items-center" >
+      <img src="../../../assets/logo.svg" alt="Logo">
+    <h1 class="title" >FitHouse</h1>
+    </div>
+  </div>
+  <div class="col-3" >
+    <div class="flex gap-5 justify-content-start align-items-center " >
+      <button 
+        pButton 
+        pRipple 
+        label="Iniciar Sesión" 
+        class="btn-login text-2xl font-semibold">
+      </button>
+      <button 
+        pButton 
+        pRipple 
+        label="Crear Cuenta" 
+        class="btn-create-account text-2xl font-semibold">
+      </button>
+    </div>
+  </div>
 </header>
