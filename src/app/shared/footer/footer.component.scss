@@ -1,0 +1,16 @@
+.title {
+  color: #efefef;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.footer-container {
+  padding: 24px 120px;
+  background: #18a0b0;
+}
+
+:host ::ng-deep {
+  color: #efefef;
+}

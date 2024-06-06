@@ -2,21 +2,27 @@
 @import "primeng/resources/themes/saga-blue/theme.css";
 @import "primeng/resources/primeng.min.css";
 @import "primeicons/primeicons.css";
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap");
 @import "variables";
-
 
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  height: 100%;
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  height: 100%;
 }
 
 main {
   display: block;
+  height: 100vh !important;
+  flex: 1;
+  overflow-y: auto;
+  padding-left: 120px;
+  padding-right: 120px;
 }
 
 h1 {
@@ -33,34 +39,51 @@ small {
   font-size: 80%;
 }
 
-.content::-webkit-scrollbar {
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.main-content::-webkit-scrollbar {
   -webkit-appearance: none;
-}
-
-.content::-webkit-scrollbar:vertical {
   width: 10px;
-  background-color: azure;
-}
-
-.content::-webkit-scrollbar-button:increment,
-.containerMnsj::-webkit-scrollbar-button {
-  display: none;
-}
-
-.content::-webkit-scrollbar:horizontal {
   height: 10px;
 }
 
-.content::-webkit-scrollbar-thumb {
-  background-color: #afafaf49;
-  border: 2px solid #afafaf49;
+html::-webkit-scrollbar:vertical,
+body::-webkit-scrollbar:vertical,
+.main-content::-webkit-scrollbar:vertical {
+  background-color: rgba(9, 54, 59, 4);
 }
 
-.content::-webkit-scrollbar-thumb:hover {
+html::-webkit-scrollbar-button:increment,
+body::-webkit-scrollbar-button:increment,
+.main-content::-webkit-scrollbar-button:increment,
+html::-webkit-scrollbar-button,
+body::-webkit-scrollbar-button,
+.main-content::-webkit-scrollbar-button {
+  display: none;
+}
+
+html::-webkit-scrollbar:horizontal,
+body::-webkit-scrollbar:horizontal,
+.main-content::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+.main-content::-webkit-scrollbar-thumb {
   background-color: #afafaf80;
   border: none;
 }
 
-.content::-webkit-scrollbar-track {
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+.main-content::-webkit-scrollbar-thumb:hover {
+  background-color: #afafafa6;
+  border: none;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+.main-content::-webkit-scrollbar-track {
   border-radius: 10px;
 }
