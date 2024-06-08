@@ -1,9 +1,5 @@
 .title{
   color: #EFEFEF;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
 }
 
 .header-container {
@@ -15,6 +11,12 @@
   @media (max-width: 425px) {
     padding: 0;
   }
+}
+
+
+.logo{
+    width: clamp(12px, 30vw, 36px);
+    height: clamp(14px, 30vh, 43px);
 }
 
 :host ::ng-deep {

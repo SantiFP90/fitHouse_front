@@ -1,1 +1,41 @@
-<main><h1>Dashboard</h1></main>
+<main>
+    <header class="grid">
+        <div class="col-12">
+            <div class="flex w-full justify-content-center">
+            <img src="../../../../assets/Hero.png" alt="Un espacio para tu bienestar y crecimiento" class="hero">
+            </div>
+            <div class="flex justify-content-center search-div-container">
+                <p-card class="search-card-container">
+                        <div class="flex  justify-content-between align-content-center ">
+
+                            <div class="flex flex-column justify-content-start gap-1">
+                                <label for="nombreClase" class="form-label text-4xl font-bold">Clase</label>
+                                <input type="text" pInputText [(ngModel)]="classSearch" />
+                            </div>
+
+                            <div class="flex flex-column justify-content-start gap-1">
+                                <label for="fechaClase" class="form-label text-4xl font-bold">Fecha</label>
+                                
+                            </div>
+
+                            <div class="flex flex-column justify-content-start gap-1">
+                                <label for="intensidadClase" class="form-label text-4xl font-bold">Intensidad</label>
+                                <select id="intensidadClase" name="intensidadClase">
+                                    <option value="baja">Baja</option>
+                                    <option value="media">Media</option>
+                                    <option value="alta">Alta</option>
+                                </select>
+                            </div>
+
+                            <button
+                            pButton
+                            pRipple
+                            class="btn-search text-xs md:text-2xl lg:text-2xl font-semibold"
+                            ><i class="pi pi-search"></i></button>
+
+                        </div>
+                </p-card>
+            </div>
+        </div>
+    </header>
+</main>

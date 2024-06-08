@@ -18,7 +18,7 @@ body {
 
 main {
   display: block;
-  height: 100vh !important;
+  // height: 100vh !important;
   flex: 1;
   overflow-y: auto;
   padding-left: 120px;
@@ -39,6 +39,7 @@ small {
   font-size: 80%;
 }
 
+main::-webkit-scrollbar,
 html::-webkit-scrollbar,
 body::-webkit-scrollbar,
 .main-content::-webkit-scrollbar {
@@ -47,6 +48,7 @@ body::-webkit-scrollbar,
   height: 10px;
 }
 
+main::-webkit-scrollbar:vertical,
 html::-webkit-scrollbar:vertical,
 body::-webkit-scrollbar:vertical,
 .main-content::-webkit-scrollbar:vertical {
@@ -55,21 +57,25 @@ body::-webkit-scrollbar:vertical,
 
 html::-webkit-scrollbar-button:increment,
 body::-webkit-scrollbar-button:increment,
+main::-webkit-scrollbar-button:increment,
 .main-content::-webkit-scrollbar-button:increment,
 html::-webkit-scrollbar-button,
 body::-webkit-scrollbar-button,
+main::-webkit-scrollbar-button,
 .main-content::-webkit-scrollbar-button {
   display: none;
 }
 
 html::-webkit-scrollbar:horizontal,
 body::-webkit-scrollbar:horizontal,
+main::-webkit-scrollbar:horizontal,
 .main-content::-webkit-scrollbar:horizontal {
   height: 10px;
 }
 
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb,
+main::-webkit-scrollbar-thumb,
 .main-content::-webkit-scrollbar-thumb {
   background-color: #afafaf80;
   border: none;
@@ -77,6 +83,7 @@ body::-webkit-scrollbar-thumb,
 
 html::-webkit-scrollbar-thumb:hover,
 body::-webkit-scrollbar-thumb:hover,
+main::-webkit-scrollbar-thumb:hover,
 .main-content::-webkit-scrollbar-thumb:hover {
   background-color: #afafafa6;
   border: none;
@@ -84,6 +91,7 @@ body::-webkit-scrollbar-thumb:hover,
 
 html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track,
+main::-webkit-scrollbar-track,
 .main-content::-webkit-scrollbar-track {
   border-radius: 10px;
 }

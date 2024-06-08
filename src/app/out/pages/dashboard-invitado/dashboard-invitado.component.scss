@@ -1,0 +1,50 @@
+header {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+}
+
+
+.hero{
+    text-align: center;
+    height: 52rem;
+    border-radius: 48px;
+    @media (max-width: 728px) {
+        padding: 32px 24px;
+    }
+}
+
+.search-div-container {
+    margin-top: -64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-label{
+    color: #063146;
+}
+
+
+:host ::ng-deep {
+    .search-card-container .p-card{
+        display: flex;
+        height: 128px;
+        padding: 48px 120px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 32px;
+        background: var(--Neutral-Gris-100, #F5F5F5);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.btn-search{
+    color: #fafafa;
+    font-size: 2rem;
+    border-radius: 16px;
+    background: var(--primario-turquesa-500-base, #18A0B0);
+    border-style: none;
+    width: 48px;
+    height: 48px;   
+}
