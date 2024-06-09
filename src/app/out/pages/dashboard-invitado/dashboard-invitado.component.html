@@ -6,7 +6,7 @@
             </div>
             <div class="flex justify-content-center search-div-container">
                 <p-card class="search-card-container">
-                        <div class="flex  justify-content-between align-content-center ">
+                        <div class="flex  justify-content-between align-content-center gap-8 ">
 
                             <div class="flex flex-column justify-content-start gap-1">
                                 <label for="nombreClase" class="form-label text-4xl font-bold">Clase</label>
@@ -15,7 +15,7 @@
 
                             <div class="flex flex-column justify-content-start gap-1">
                                 <label for="fechaClase" class="form-label text-4xl font-bold">Fecha</label>
-                                
+                                <p-calendar [(ngModel)]="date"></p-calendar>
                             </div>
 
                             <div class="flex flex-column justify-content-start gap-1">
@@ -37,5 +37,161 @@
                 </p-card>
             </div>
         </div>
-    </header>
+        </header>
+        <section>
+            <div class="col-12">
+                <h2 class="sub-title text-6xl font-bold mb-0">Categorias</h2>
+                <p class="reference-sub-title font-medium text-2xl m-0" >Explora una gran selección de clases para todos los gustos y niveles.</p>
+            </div>
+            <div class="flex flex-row flex-wrap align-content-center align-items-center justify-content-center gap-5 pt-7">
+                <p-card header="Pilates" class="categories pilates-category">
+                    <ng-template pTemplate="header">
+                        <img alt="Pilates" src="../../../../assets/pilates.svg" />
+                    </ng-template>
+                </p-card>
+                <p-card header="Gimnasia" class="categories gym-category">
+                    <ng-template pTemplate="header" >
+                        <img alt="Gimnasia" src="../../../../assets/gimnasia.svg" />
+                    </ng-template>
+                </p-card>
+                <p-card header="Cardio" class="categories cardio-category">
+                    <ng-template pTemplate="header" >
+                        <img alt="Cardio" src="../../../../assets/cardio.svg" />
+                    </ng-template>
+                </p-card>
+                <p-card header="Musculación"  class="categories fitness-category" >
+                    <ng-template pTemplate="header">
+                        <img alt="Musculación" src="../../../../assets/musculacion.svg" />
+                    </ng-template>
+                </p-card>
+                <p-card header="Yoga" class="categories yoga-category">
+                    <ng-template pTemplate="header">
+                        <img alt="Yoga" src="../../../../assets/yoga.svg" />
+                    </ng-template>
+                </p-card>
+                <p-card header="Funcional" class="categories functional-category">
+                    <ng-template pTemplate="header">
+                        <img alt="Funcional" src="../../../../assets/funcional.svg" />
+                    </ng-template>
+                </p-card>
+            </div>
+        </section>
+        <section>
+            <div class="col-12">
+                <h2 class="sub-title text-6xl font-bold mb-0">Clases Recomendadas</h2>
+                <p class="reference-sub-title font-medium text-2xl m-0" >Explora una gran selección de clases para todos los gustos y niveles.
+                </p>
+            </div>
+            <div class="card-container">
+                <p-carousel [value]="classes" [numVisible]="3" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions">
+                  <ng-template pTemplate="item" let-class>
+                    <p-card header="{{ class.name }}" class="custom-card">
+                      <ng-template pTemplate="header">
+                        <img alt="Clases recomendadas" [src]="class.image" class="class-image"/>
+                      </ng-template>
+                        <div class="card-footer">
+                          <div class="card-footer-item">
+                            <label><i class="pi pi-angle-double-up" style="color: #18A0B0;"></i> Intensidad</label>
+                            <p>{{ class.intensity }}</p>
+                          </div>
+                          <div class="card-footer-item">
+                            <label><i class="pi pi-calendar" style="color: #18A0B0;"></i> Fecha</label>
+                            <p>{{ class.date }}</p>
+                          </div>
+                        </div>
+                    </p-card>
+                  </ng-template>
+                </p-carousel>
+              </div>
+              
+        </section>
 </main>
+
+
+            <!-- <div class="flex flex-row flex-wrap align-content-center align-items-center justify-content-center gap-5 pt-7">
+                <p-card header="Nombre de la clase">
+                    <ng-template pTemplate="header">
+                        <img alt="Clases recomendadas" src="../../../../assets/class.webp" />
+                    </ng-template>
+                    <ng-template pTemplate="footer">
+                        <div class="flex justify-content-start align-content-center gap-4">
+                            <div class="flex flex-column justify-content-start">
+                                <label for="intensity" ><i class="pi-infor pi pi-angle-double-up" style="color: #18A0B0;" ></i> Intensidad</label>
+                                <p name="intensity" >Fuerte</p>
+                            </div>
+                            <div class="flex flex-column justify-content-start">
+                                <label for="date"><i class="pi-infor pi pi-calendar" style="color: #18A0B0;"></i> Fecha</label>
+                                <p name="date" >22-03-2029</p>
+                            </div>
+                        </div> 
+                    </ng-template>
+                </p-card>
+                <p-card header="Nombre de la clase">
+                    <ng-template pTemplate="header">
+                        <img alt="Clases recomendadas" src="./../../../assets/class.webp" />
+                    </ng-template>
+                    <ng-template pTemplate="footer">
+                        <div class="flex justify-content-start align-content-center gap-4">
+                            <div class="flex flex-column justify-content-start">
+                                <label for="intensity" ><i class="pi-infor pi pi-angle-double-up" style="color: #18A0B0;" ></i> Intensidad</label>
+                                <p name="intensity" >Fuerte</p>
+                            </div>
+                            <div class="flex flex-column justify-content-start">
+                                <label for="date"><i class="pi-infor pi pi-calendar" style="color: #18A0B0;"></i> Fecha</label>
+                                <p name="date" >22-03-2029</p>
+                            </div>
+                        </div> 
+                    </ng-template>
+                </p-card>
+                <p-card header="Nombre de la clase">
+                    <ng-template pTemplate="header">
+                        <img alt="Clases recomendadas" src="./../../../assets/class.webp" />
+                    </ng-template>
+                    <ng-template pTemplate="footer">
+                        <div class="flex justify-content-start align-content-center gap-4">
+                            <div class="flex flex-column justify-content-start">
+                                <label for="intensity" ><i class="pi-infor pi pi-angle-double-up" style="color: #18A0B0;" ></i> Intensidad</label>
+                                <p name="intensity" >Fuerte</p>
+                            </div>
+                            <div class="flex flex-column justify-content-start">
+                                <label for="date"><i class="pi-infor pi pi-calendar" style="color: #18A0B0;"></i> Fecha</label>
+                                <p name="date" >22-03-2029</p>
+                            </div>
+                        </div> 
+                    </ng-template>
+                </p-card>
+                <p-card header="Nombre de la clase">
+                    <ng-template pTemplate="header">
+                        <img alt="Clases recomendadas" src="./../../../assets/class.webp" />
+                    </ng-template>
+                    <ng-template pTemplate="footer">
+                        <div class="flex justify-content-start align-content-center gap-4">
+                            <div class="flex flex-column justify-content-start">
+                                <label for="intensity" ><i class="pi-infor pi pi-angle-double-up" style="color: #18A0B0;" ></i> Intensidad</label>
+                                <p name="intensity" >Fuerte</p>
+                            </div>
+                            <div class="flex flex-column justify-content-start">
+                                <label for="date"><i class="pi-infor pi pi-calendar" style="color: #18A0B0;"></i> Fecha</label>
+                                <p name="date" >22-03-2029</p>
+                            </div>
+                        </div> 
+                    </ng-template>
+                </p-card>
+                <p-card header="Nombre de la clase">
+                    <ng-template pTemplate="header">
+                        <img alt="Clases recomendadas" src="./../../../assets/class.webp" />
+                    </ng-template>
+                    <ng-template pTemplate="footer">
+                        <div class="flex justify-content-start align-content-center gap-4">
+                            <div class="flex flex-column justify-content-start">
+                                <label for="intensity" ><i class="pi-infor pi pi-angle-double-up" style="color: #18A0B0;" ></i> Intensidad</label>
+                                <p name="intensity" >Fuerte</p>
+                            </div>
+                            <div class="flex flex-column justify-content-start">
+                                <label for="date"><i class="pi-infor pi pi-calendar" style="color: #18A0B0;"></i> Fecha</label>
+                                <p name="date" >22-03-2029</p>
+                            </div>
+                        </div> 
+                    </ng-template>
+                </p-card>
+            </div> -->

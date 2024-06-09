@@ -1,5 +1,4 @@
 header {
-    padding-top: 7.5rem;
     padding-bottom: 7.5rem;
 }
 
@@ -47,4 +46,102 @@ header {
     border-style: none;
     width: 48px;
     height: 48px;   
+}
+
+.sub-title{
+    color: var(--secundario-azul-500-base, #063146);
+}
+
+.reference-sub-title{
+    color: var(--Neutral-Gris-900, #1E1E1E);
+}
+
+:host ::ng-deep{
+    .categories .p-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 15rem;
+        padding: 2rem;
+        gap: 8px;
+        border-radius: 16px;
+        color: var(--Neutral-Gris-100, #F5F5F5);
+    }
+    .pilates-category .p-card{
+        background: var(--Adicional-Violeta-fondo, #AAA6F5);
+    }
+    .gym-category .p-card{
+        background: var(--Adicional-Indigo-fondo, #A2B0F5);
+    }
+    .cardio-category .p-card{
+        background: var(--Adicional-Azul-fondo, #92C3F5);
+    }
+    .fitness-category .p-card{
+        background: var(--Adicional-Celeste-fondo, #B8EAF1);
+    }
+    .yoga-category .p-card{
+        background: var(--Adicional-Rosa-fondo, #DB96EC);
+    } 
+    .functional-category .p-card{
+        background: var(--Adicional-Fucsia-fondo, #F899BC);
+    }
+}
+
+:host ::ng-deep{
+
+    .p-carousel-container {
+        height: 35rem;
+    }
+      
+    .card-container {
+        padding: 50px;
+    }
+
+    .p-carousel .p-carousel-item {
+        padding: 0 15px;
+    }
+      
+    .custom-card .p-card {
+        width: 396px;
+        height: 480px;
+        border-radius: 32px;
+        overflow: hidden;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+      
+    .class-image {
+        width: 100%;
+        height: 350px;
+    }
+      
+    .card-footer {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 10px;
+        background: #fff;
+        gap: 20px;
+    }
+      
+    .card-footer-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+      
+    .card-footer-item label {
+        font-size: 14px;
+        color: #18A0B0;
+    }
+      
+    .card-footer-item p {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button{
+        background: #18a0b0;
+    }
+      
 }
