@@ -8,10 +8,10 @@ import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { CarouselModule } from 'primeng/carousel';
-
+import { DropdownModule } from 'primeng/dropdown';
 @NgModule({
   declarations: [],
-  imports: [CommonModule, ButtonModule, DividerModule, ScrollTopModule, CardModule, CalendarModule, InputTextModule, OverlayPanelModule, CarouselModule],
-  exports: [ButtonModule, DividerModule, ScrollTopModule, CardModule, CalendarModule, InputTextModule, OverlayPanelModule, CarouselModule],
+  imports: [CommonModule, ButtonModule, DividerModule, ScrollTopModule, CardModule, CalendarModule, InputTextModule, OverlayPanelModule, CarouselModule, DropdownModule],
+  exports: [ButtonModule, DividerModule, ScrollTopModule, CardModule, CalendarModule, InputTextModule, OverlayPanelModule, CarouselModule, DropdownModule],
 })
 export class PrimengModule {}

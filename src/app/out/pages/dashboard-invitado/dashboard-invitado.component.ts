@@ -12,6 +12,13 @@ export class DashboardInvitadoComponent {
   classes: any[];
   responsiveOptions: any[];
 
+  searchTerm: string = '';
+  selectedDate: string | null = null;
+  selectedIntensity: string | null = null;
+
+  options = [{label: 'Todas las fechas', value: null}, {label: 'Fecha 1', value: 'fecha1'}, {label: 'Fecha 2', value: 'fecha2'}]
+  optionsIntensity = [{label: 'Todas las intensidades', value: null}, {label: 'Baja', value: 'baja'}, {label: 'Media', value: 'media'}, {label: 'Alta', value: 'alta'}]
+
   constructor() {
     this.classes = [
       { name: 'Nombre de la clase 1', image: '../../../../assets/class.webp', intensity: 'Fuerte', date: '22-03-2029' },
@@ -37,5 +44,12 @@ export class DashboardInvitadoComponent {
       numScroll: 1
     }
   ];
+  }
+
+  onSearch(): void {
+    // Implementar la lógica de búsqueda
+    console.log('Search term:', this.searchTerm);
+    console.log('Selected date:', this.selectedDate);
+    console.log('Selected intensity:', this.selectedIntensity);
   }
 }

@@ -24,17 +24,51 @@ header {
     color: #063146;
 }
 
+.searchs-container{
+    border-right: solid 2px #063146;
+}
+
 
 :host ::ng-deep {
     .search-card-container .p-card{
         display: flex;
-        height: 128px;
-        padding: 48px 120px;
+        height: auto;
+        padding: 24px 120px;
+
         justify-content: center;
         align-items: center;
         border-radius: 32px;
         background: var(--Neutral-Gris-100, #F5F5F5);
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    .p-inputtext{
+        border: none;
+        background-color: transparent;
+    }
+    input:focus {
+        outline: none;
+      }
+    .p-inputtext:enabled:focus{
+        box-shadow: 0 0 0 0.2rem #18a1b080;
+    }
+    .p-inputtext:enabled:hover{
+        border: none;
+    } 
+    .p-dropdown{
+        background: transparent;
+        border: none;
+    }
+    .p-dropdown .p-dropdown-label:focus{
+        box-shadow: 0 0 0 0.2rem #18a1b080;
+    }
+    .p-button:focus {
+        box-shadow: 0 0 0 0.2rem #18a1b080;
+    }
+    .p-dropdown-trigger {
+        display: none;
+    }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight.p-focus {
+        background:#18a1b080;
     }
 }
 
@@ -95,7 +129,7 @@ header {
     }
       
     .card-container {
-        padding: 50px;
+        // padding: 50px;
     }
 
     .p-carousel .p-carousel-item {

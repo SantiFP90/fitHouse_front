@@ -6,33 +6,48 @@
             </div>
             <div class="flex justify-content-center search-div-container">
                 <p-card class="search-card-container">
-                        <div class="flex  justify-content-between align-content-center gap-8 ">
+                        <div class="grid justify-content-center ">
+                             
+                            <div class="searchs-container col-12 md:col-3 lg:col-3 p-3">
+                                <div class="flex flex-column justify-content-start gap-1">
+                                    <label for="nombreClase" class="form-label text-4xl font-bold">Clase</label>
+                                    <div class="flex align-items-center gap-0">
+                                        <img src="../../../../assets/run.svg" alt="">
+                                        <input class="w-full" type="text" pInputText [(ngModel)]="classSearch" placeholder="Ingrese el nombre de la clase" />
+                                    </div>
+                                </div>
 
-                            <div class="flex flex-column justify-content-start gap-1">
-                                <label for="nombreClase" class="form-label text-4xl font-bold">Clase</label>
-                                <input type="text" pInputText [(ngModel)]="classSearch" />
                             </div>
 
-                            <div class="flex flex-column justify-content-start gap-1">
-                                <label for="fechaClase" class="form-label text-4xl font-bold">Fecha</label>
-                                <p-calendar [(ngModel)]="date"></p-calendar>
+                            <div class="searchs-container col-12 md:col-3 lg:col-3 p-3">
+                                <div class="flex flex-column justify-content-start gap-1">
+                                    <label for="fechaClase" class="form-label text-4xl font-bold">Fecha</label>
+                                    <div class="flex align-items-center gap-0">
+                                        <img src="../../../../assets/calendar.svg" alt="">
+                                    <p-calendar class="w-full" [(ngModel)]="date" placeholder="Ingrese la fecha"></p-calendar>
+                                    </div>  
+                                </div>
                             </div>
 
-                            <div class="flex flex-column justify-content-start gap-1">
-                                <label for="intensidadClase" class="form-label text-4xl font-bold">Intensidad</label>
-                                <select id="intensidadClase" name="intensidadClase">
-                                    <option value="baja">Baja</option>
-                                    <option value="media">Media</option>
-                                    <option value="alta">Alta</option>
-                                </select>
+                            <div class="col-12 md:col-3 lg:col-3 p-3">
+                                <div class="flex flex-column justify-content-start gap-1">
+                                    <label for="intensidadClase" class="form-label text-4xl font-bold">Intensidad</label>
+                                    <div class="flex align-items-center gap-0">
+                                        <img src="../../../../assets/flame.svg" alt="">    
+                                    <p-dropdown class="w-full" [(ngModel)]="selectedIntensity" placeholder="Seleccione la intensidad de la clase" [options]="optionsIntensity"></p-dropdown>
+                                    </div>    
+                                </div>
                             </div>
 
-                            <button
-                            pButton
-                            pRipple
-                            class="btn-search text-xs md:text-2xl lg:text-2xl font-semibold"
-                            ><i class="pi pi-search"></i></button>
-
+                            <div class="col-12 md:col-3 lg:col-3 p-3">
+                                <div class="flex justify-content-end align-self-end" >
+                                    <button
+                                    pButton
+                                    pRipple
+                                    class="btn-search text-xs md:text-2xl lg:text-2xl font-semibold"
+                                    ><i class="pi pi-search"></i></button>
+                                </div>
+                            </div>
                         </div>
                 </p-card>
             </div>
@@ -83,32 +98,7 @@
                 </p>
             </div>
             <div class="card-container">
-                <p-carousel [value]="classes" [numVisible]="3" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions">
-                  <ng-template pTemplate="item" let-class>
-                    <p-card header="{{ class.name }}" class="custom-card">
-                      <ng-template pTemplate="header">
-                        <img alt="Clases recomendadas" [src]="class.image" class="class-image"/>
-                      </ng-template>
-                        <div class="card-footer">
-                          <div class="card-footer-item">
-                            <label><i class="pi pi-angle-double-up" style="color: #18A0B0;"></i> Intensidad</label>
-                            <p>{{ class.intensity }}</p>
-                          </div>
-                          <div class="card-footer-item">
-                            <label><i class="pi pi-calendar" style="color: #18A0B0;"></i> Fecha</label>
-                            <p>{{ class.date }}</p>
-                          </div>
-                        </div>
-                    </p-card>
-                  </ng-template>
-                </p-carousel>
-              </div>
-              
-        </section>
-</main>
-
-
-            <!-- <div class="flex flex-row flex-wrap align-content-center align-items-center justify-content-center gap-5 pt-7">
+                <div class="flex flex-row flex-wrap align-content-center align-items-center justify-content-center gap-5 pt-7">
                 <p-card header="Nombre de la clase">
                     <ng-template pTemplate="header">
                         <img alt="Clases recomendadas" src="../../../../assets/class.webp" />
@@ -194,4 +184,30 @@
                         </div> 
                     </ng-template>
                 </p-card>
-            </div> -->
+                </div> 
+              </div>    
+        </section>
+</main>
+
+
+
+
+            <!-- <p-carousel [value]="classes" [numVisible]="3" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions">
+                <ng-template pTemplate="item" let-class>
+                  <p-card header="{{ class.name }}" class="custom-card">
+                    <ng-template pTemplate="header">
+                      <img alt="Clases recomendadas" [src]="class.image" class="class-image"/>
+                    </ng-template>
+                      <div class="card-footer">
+                        <div class="card-footer-item">
+                          <label><i class="pi pi-angle-double-up" style="color: #18A0B0;"></i> Intensidad</label>
+                          <p>{{ class.intensity }}</p>
+                        </div>
+                        <div class="card-footer-item">
+                          <label><i class="pi pi-calendar" style="color: #18A0B0;"></i> Fecha</label>
+                          <p>{{ class.date }}</p>
+                        </div>
+                      </div>
+                  </p-card>
+                </ng-template>
+              </p-carousel> -->
