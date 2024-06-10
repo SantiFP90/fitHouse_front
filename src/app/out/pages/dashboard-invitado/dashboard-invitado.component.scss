@@ -1,184 +1,200 @@
-.hero{
-    text-align: center;
-    border-radius: 48px;
-    @media (max-width: 728px) {
-        padding: 32px 24px;
-    }
+.hero {
+  text-align: center;
+  border-radius: 48px;
+  @media (max-width: 728px) {
+    padding: 32px 24px;
+  }
+  @media (max-width: 425px) {
+    display: none !important;
+  }
 }
 
 .search-div-container {
-    margin-top: -4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-top: -4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.form-label{
-    color: #063146;
+.form-label {
+  color: #063146;
 }
 
-.searchs-container{
-    border-right: solid 2px #E0E0E0;
+.searchs-container {
+  border-right: solid 2px #e0e0e0;
+  @media (max-width: 425px) {
+    border: none !important;
+  }
 }
-
 
 :host ::ng-deep {
-    .search-card-container .p-card{
-        display: flex;
-        height: auto;
-        padding: 0 64px;
-
-        justify-content: center;
-        align-items: center;
-        border-radius: 32px;
-        background: var(--Neutral-Gris-100, #F5F5F5);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  .search-card-container .p-card {
+    display: flex;
+    height: auto;
+    padding: 0 64px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px;
+    background: var(--Neutral-Gris-100, #f5f5f5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    @media (max-width: 768px) {
+      padding: 0;
     }
-    .p-inputtext{
-        border: none;
-        background-color: transparent;
+    @media (max-width: 425px) {
+      margin-top: 4rem;
+      padding: 0;
     }
-    input:focus {
-        outline: none;
-      }
-    .p-inputtext:enabled:focus{
-        box-shadow: 0 0 0 0.2rem #18a1b080;
-    }
-    .p-inputtext:enabled:hover{
-        border: none;
-    } 
-    .p-dropdown{
-        background: transparent;
-        border: none;
-    }
-    .p-dropdown .p-dropdown-label:focus{
-        box-shadow: 0 0 0 0.2rem #18a1b080;
-    }
-    .p-button:focus {
-        box-shadow: 0 0 0 0.2rem #18a1b080;
-    }
-    .p-dropdown-trigger {
-        display: none;
-    }
-    .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight.p-focus {
-        background:#18a1b080;
-    }
+  }
+  .p-inputtext {
+    border: none;
+    background-color: transparent;
+  }
+  input:focus {
+    outline: none;
+  }
+  .p-inputtext:enabled:focus {
+    box-shadow: 0 0 0 0.2rem #18a1b080;
+  }
+  .p-inputtext:enabled:hover {
+    border: none;
+  }
+  .p-dropdown {
+    background: transparent;
+    border: none;
+    max-width: 200px !important;
+  }
+  .p-dropdown .p-dropdown-label:focus {
+    box-shadow: 0 0 0 0.2rem #18a1b080;
+  }
+  .p-button:focus {
+    box-shadow: 0 0 0 0.2rem #18a1b080;
+  }
+  .p-dropdown-trigger {
+    display: none;
+  }
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight.p-focus {
+    background: #18a1b080;
+  }
 }
 
-.btn-search{
-    color: #fafafa;
-    font-size: 2rem;
+.btn-search {
+  color: #fafafa;
+  font-size: 2rem;
+  border-radius: 16px;
+  background: var(--primario-turquesa-500-base, #18a0b0);
+  border-style: none;
+  width: 48px;
+  height: 48px;
+}
+
+.sub-title {
+  color: var(--secundario-azul-500-base, #063146);
+}
+
+.reference-sub-title {
+  color: var(--Neutral-Gris-900, #1e1e1e);
+}
+
+:host ::ng-deep {
+  .categories .p-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem;
+    gap: 8px;
     border-radius: 16px;
-    background: var(--primario-turquesa-500-base, #18A0B0);
-    border-style: none;
-    width: 48px;
-    height: 48px;   
+    color: var(--Neutral-Gris-100, #f5f5f5);
+  }
+  .pilates-category .p-card {
+    background: var(--Adicional-Violeta-fondo, #aaa6f5);
+  }
+  .gym-category .p-card {
+    background: var(--Adicional-Indigo-fondo, #a2b0f5);
+  }
+  .cardio-category .p-card {
+    background: var(--Adicional-Azul-fondo, #92c3f5);
+  }
+  .fitness-category .p-card {
+    background: var(--Adicional-Celeste-fondo, #b8eaf1);
+  }
+  .yoga-category .p-card {
+    background: var(--Adicional-Rosa-fondo, #db96ec);
+  }
+  .functional-category .p-card {
+    background: var(--Adicional-Fucsia-fondo, #f899bc);
+  }
+
+  .recomended-class {
+    .p-card-header img {
+      border-radius: 24px 24px 0 0;
+    }
+    .p-card {
+      border-radius: 24px;
+    }
+  }
 }
 
-.sub-title{
-    color: var(--secundario-azul-500-base, #063146);
-}
+:host ::ng-deep {
+  .p-carousel-container {
+    height: 35rem;
+  }
 
-.reference-sub-title{
-    color: var(--Neutral-Gris-900, #1E1E1E);
-}
+  .categories .p-card .p-card-content {
+    padding: 0;
+  }
 
-:host ::ng-deep{
-    .categories .p-card {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        // width: 15rem;
-        padding: 2rem;
-        gap: 8px;
-        border-radius: 16px;
-        color: var(--Neutral-Gris-100, #F5F5F5);
-    }
-    .pilates-category .p-card{
-        background: var(--Adicional-Violeta-fondo, #AAA6F5);
-    }
-    .gym-category .p-card{
-        background: var(--Adicional-Indigo-fondo, #A2B0F5);
-    }
-    .cardio-category .p-card{
-        background: var(--Adicional-Azul-fondo, #92C3F5);
-    }
-    .fitness-category .p-card{
-        background: var(--Adicional-Celeste-fondo, #B8EAF1);
-    }
-    .yoga-category .p-card{
-        background: var(--Adicional-Rosa-fondo, #DB96EC);
-    } 
-    .functional-category .p-card{
-        background: var(--Adicional-Fucsia-fondo, #F899BC);
-    }
-}
+  .categories .p-card .p-card-body {
+    padding: 0;
+  }
 
-:host ::ng-deep{
+  .recommended .p-card .p-card-content {
+    padding: 0;
+  }
 
-    .p-carousel-container {
-        height: 35rem;
-    }
+  .p-carousel .p-carousel-item {
+    padding: 0 15px;
+  }
 
-    .categories .p-card .p-card-content {
-        padding: 0;
-    }
+  .custom-card .p-card {
+    width: 396px;
+    height: 480px;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
-    .categories .p-card .p-card-body {
-        padding: 0;
-    }
+  .class-image {
+    width: 100%;
+    height: 350px;
+  }
 
-    .recommended .p-card .p-card-content {
-        padding: 0;
-    } 
-      
+  .card-footer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    background: #fff;
+    gap: 20px;
+  }
 
-    .p-carousel .p-carousel-item {
-        padding: 0 15px;
-    }
-      
-    .custom-card .p-card {
-        width: 396px;
-        height: 480px;
-        border-radius: 32px;
-        overflow: hidden;
-        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1); 
-    }
-      
-    .class-image {
-        width: 100%;
-        height: 350px;
-    }
-      
-    .card-footer {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        padding: 10px;
-        background: #fff;
-        gap: 20px;
-    }
-      
-    .card-footer-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-      
-    .card-footer-item label {
-        font-size: 14px;
-        color: #18A0B0;
-    }
-      
-    .card-footer-item p {
-        margin: 0;
-        font-size: 12px;
-    }
+  .card-footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button{
-        background: #18a0b0;
-    }
-      
+  .card-footer-item label {
+    font-size: 14px;
+    color: #18a0b0;
+  }
+
+  .card-footer-item p {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+    background: #18a0b0;
+  }
 }

@@ -1,37 +1,36 @@
-.title{
-  color: #EFEFEF;
+.title {
+  color: #efefef;
 }
 
 .header-container {
   padding: 0 120px;
-  background: #18A0B0;
+  background: #18a0b0;
   @media (max-width: 768px) {
     padding: 32px 15px;
   }
   @media (max-width: 425px) {
-    padding: 0;
+    padding: 0 0 15px 0;
   }
 }
 
-
-.logo{
-    width: clamp(12px, 30vw, 36px);
-    height: clamp(14px, 30vh, 43px);
+.logo {
+  width: clamp(12px, 30vw, 36px);
+  height: clamp(14px, 30vh, 43px);
 }
 
 :host ::ng-deep {
-  .btn-login{
-      padding: 11px 24px;
-      border-radius: 16px;
-      border: 1px solid #EFEFEF;
-      background: transparent;
-      color: #EFEFEF;
+  .btn-login {
+    padding: 11px 24px;
+    border-radius: 16px;
+    border: 1px solid #efefef;
+    background: transparent;
+    color: #efefef;
   }
-  .btn-create-account{
+  .btn-create-account {
     padding: 11.5px 24px;
     border-radius: 16px;
-    background: #09363B;
-    color: #EFEFEF;
+    background: #09363b;
+    color: #efefef;
     border-style: none;
   }
 }
