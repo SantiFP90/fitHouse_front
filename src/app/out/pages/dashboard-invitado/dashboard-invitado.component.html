@@ -1,14 +1,12 @@
 <main>
     <header class="grid">
-        <div class="col-12">
-            <div class="flex w-full justify-content-center">
-            <img src="../../../../assets/Hero.png" alt="Un espacio para tu bienestar y crecimiento" class="hero">
-            </div>
+        <div class="col-12 p-0">
+            <img src="../../../../assets/Hero.png" alt="Un espacio para tu bienestar y crecimiento" class="hero w-full">
             <div class="flex justify-content-center search-div-container">
                 <p-card class="search-card-container">
                         <div class="grid justify-content-center ">
                              
-                            <div class="searchs-container col-12 md:col-3 lg:col-3 p-3">
+                            <div class="searchs-container col-12 md:col-3 lg:col-3 p-3 ">
                                 <div class="flex flex-column justify-content-start gap-1">
                                     <label for="nombreClase" class="form-label text-4xl font-bold">Clase</label>
                                     <div class="flex align-items-center gap-0">
@@ -39,7 +37,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 md:col-3 lg:col-3 p-3">
+                            <div class="col-12 md:col-3 lg:col-3 p-3 flex justify-content-end align-items-center">
                                 <div class="flex justify-content-end align-self-end" >
                                     <button
                                     pButton
@@ -53,52 +51,52 @@
             </div>
         </div>
         </header>
-        <section>
-            <div class="col-12">
-                <h2 class="sub-title text-6xl font-bold mb-0">Categorias</h2>
-                <p class="reference-sub-title font-medium text-2xl m-0" >Explora una gran selección de clases para todos los gustos y niveles.</p>
+        <section class="flex flex-column gap-5">
+            <div class="col-12 flex flex-column gap-3 ">
+                <h2 class="sub-title text-base lg:text-4xl font-bold mb-0 mt-7">Categorias</h2>
+                <p class="reference-sub-title font-medium text-xs lg:text-xl m-0" >Explora una gran selección de clases para todos los gustos y niveles.</p>
             </div>
-            <div class="flex flex-row flex-wrap align-content-center align-items-center justify-content-center gap-5 pt-7">
-                <p-card header="Pilates" class="categories pilates-category">
+            <div class="flex flex-wrap p-0 col-12 justify-content-between mb-5 row-gap-5 ">
+                <p-card header="Pilates" class="categories pilates-category p-0 w-21rem lg:w-15rem">
                     <ng-template pTemplate="header">
                         <img alt="Pilates" src="../../../../assets/pilates.svg" />
                     </ng-template>
                 </p-card>
-                <p-card header="Gimnasia" class="categories gym-category">
+                <p-card header="Gimnasia" class="categories gym-category p-0 mb-5 w-21rem lg:w-15rem">
                     <ng-template pTemplate="header" >
                         <img alt="Gimnasia" src="../../../../assets/gimnasia.svg" />
                     </ng-template>
                 </p-card>
-                <p-card header="Cardio" class="categories cardio-category">
+                <p-card header="Cardio" class="categories cardio-category p-0 mb-5 w-21rem lg:w-15rem">
                     <ng-template pTemplate="header" >
                         <img alt="Cardio" src="../../../../assets/cardio.svg" />
                     </ng-template>
                 </p-card>
-                <p-card header="Musculación"  class="categories fitness-category" >
+                <p-card header="Musculación"  class="categories fitness-category p-0 mb-5 w-21rem lg:w-15rem " >
                     <ng-template pTemplate="header">
                         <img alt="Musculación" src="../../../../assets/musculacion.svg" />
                     </ng-template>
                 </p-card>
-                <p-card header="Yoga" class="categories yoga-category">
+                <p-card header="Yoga" class="categories yoga-category p-0 mb-3 w-21rem lg:w-15rem">
                     <ng-template pTemplate="header">
                         <img alt="Yoga" src="../../../../assets/yoga.svg" />
                     </ng-template>
                 </p-card>
-                <p-card header="Funcional" class="categories functional-category">
+                <p-card header="Funcional" class="categories functional-category p-0 mb-5 w-21rem lg:w-15rem">
                     <ng-template pTemplate="header">
                         <img alt="Funcional" src="../../../../assets/funcional.svg" />
                     </ng-template>
                 </p-card>
             </div>
         </section>
-        <section>
-            <div class="col-12">
-                <h2 class="sub-title text-6xl font-bold mb-0">Clases Recomendadas</h2>
-                <p class="reference-sub-title font-medium text-2xl m-0" >Explora una gran selección de clases para todos los gustos y niveles.
+        <section class="flex flex-column gap-5" >
+            <div class="col-12 flex flex-column gap-3">
+                <h2 class="sub-title text-base lg:text-4xl font-bold mb-0 mt-7">Clases Recomendadas</h2>
+                <p class="reference-sub-title font-medium text-xs lg:text-xl m-0" >Explora una gran selección de clases para todos los gustos y niveles.
                 </p>
             </div>
-            <div class="card-container">
-                <div class="flex flex-row flex-wrap align-content-center align-items-center justify-content-center gap-5 pt-7">
+            <div class="card-container recommended">
+                <div class="flex flex-row flex-wrap align-content-center align-items-center justify-content-between">
                 <p-card header="Nombre de la clase">
                     <ng-template pTemplate="header">
                         <img alt="Clases recomendadas" src="../../../../assets/class.webp" />
